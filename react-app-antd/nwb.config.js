@@ -19,9 +19,11 @@ module.exports = {
   webpack: {
     rules: {
       less: {
-        javascriptEnabled: true,
-        modifyVars: {
-          '@primary-color': '#1DA57A'
+        lessOptions: { // If you are using less-loader@5 please spread the lessOptions to less directly
+         javascriptEnabled: true,
+          modifyVars: {
+            '@primary-color': '#1DA57A'
+          }
         }
       }
     }
